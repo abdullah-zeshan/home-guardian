@@ -1,13 +1,14 @@
-   @plugin "@tailwindcss/typography";
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #f4f4f5;
-  --accent: #f97316;
-  --accent-dark: #c2410c;
-  --card: #16161d;
-  --border: #2a2a35;
+  --background: #0b1120;
+  --foreground: #e2e8f0;
+  --accent: #5eead4;
+  --accent-dim: #2dd4bf;
+  --danger: #f87171;
+  --warning: #fbbf24;
+  --line: #1e293b;
 }
 
 body {
@@ -15,29 +16,26 @@ body {
   color: var(--foreground);
   font-family: system-ui, -apple-system, sans-serif;
 }
+
+   .font-mono-label {
+     font-family: system-ui, -apple-system, sans-serif;
+     font-weight: 700;
+     letter-spacing: 0.12em;
+     font-size: 0.75rem;
+   }
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.6); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
 .animate-fade-up {
   animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.animate-glow {
-  animation: glow 3s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
 }
