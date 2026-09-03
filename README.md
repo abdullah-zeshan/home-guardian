@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Home Guardian
 
-## Getting Started
+Your house, explained. Upload a home inspection report and Home Guardian breaks it down into what actually matters: what's routine, what needs fixing now, and what to investigate soon.
 
-First, run the development server:
+**Live demo:** https://home-guardian.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What it does
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Upload your home inspection report and get it analyzed automatically
+- Issues are sorted into three priority levels: Routine, Fix Now, and Investigate Soon
+- Flags urgent problems like toilet overflows, gas smells, and bracket repairs
+- Includes an emergency mode for when something's wrong right now
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next.js, Gemini API, Tailwind CSS, Supabase, Vercel
 
-## Learn More
+## Screenshots
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Homepage](https://github.com/abdullah-zeshan/home-guardian/raw/master/homepage.png)
+![Emergency Mode](https://github.com/abdullah-zeshan/home-guardian/raw/master/emergency.png)
+![Report Analysis](https://github.com/abdullah-zeshan/home-guardian/raw/master/report.png)
