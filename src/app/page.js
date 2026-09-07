@@ -43,20 +43,27 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center">
-          <Link
-            href="/emergency"
-            className="px-8 py-4 rounded-lg bg-teal-400 text-slate-900 font-semibold hover:bg-teal-300 transition-all duration-300"
-          >
-            Something's wrong
-          </Link>
+  <Link
+    href="/emergency"
+    className="px-8 py-4 rounded-lg bg-teal-400 text-slate-900 font-semibold hover:bg-teal-300 transition-all duration-300"
+  >
+    Something's wrong
+  </Link>
 
-          <Link
-            href="/report"
-            className="px-8 py-4 rounded-lg border border-slate-700 text-white font-semibold hover:border-teal-400 transition-all duration-300"
-          >
-            Read my report
-          </Link>
-        </div>
+  <Link
+    href="/report"
+    className="px-8 py-4 rounded-lg border border-slate-700 text-white font-semibold hover:border-teal-400 transition-all duration-300"
+  >
+    Read my report
+  </Link>
+
+  <Link
+    href="/create-report"
+    className="px-8 py-4 rounded-lg border border-slate-700 text-white font-semibold hover:border-teal-400 transition-all duration-300"
+  >
+    Don't have a report? Create one
+  </Link>
+</div>
       </motion.div>
     </div>
   );

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
@@ -33,9 +33,28 @@ export default function Report() {
   const [result, setResult] = useState("");
   const [dragActive, setDragActive] = useState(false);
   const [statusIndex, setStatusIndex] = useState(0);
+    useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("autofill") === "true") {
+      const pdfData = sessionStorage.getItem("autofillPdf");
+      if (pdfData) {
+        fetch(pdfData)
+          .then((res) => res.blob())
+          .then((blob) => {
+            const autoFile = new File([blob], "home-guardian-report.pdf", {
+              type: "application/pdf",
+            });
+            setFile(autoFile);
+            handleUpload(autoFile);
+            sessionStorage.removeItem("autofillPdf");
+          });
+      }
+    }
+  }, []);
 
-  async function handleUpload() {
-    if (!file) return;
+  async function handleUpload(autoFile) {
+    const fileToUse = autoFile || file;
+    if (!fileToUse) return;
     setLoading(true);
     const interval = setInterval(() => {
   setStatusIndex((i) => (i + 1) % statusMessages.length);
@@ -43,7 +62,7 @@ export default function Report() {
     setResult("");
 
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("file", fileToUse);
 
     const res = await fetch("/api/analyze", {
       method: "POST",
