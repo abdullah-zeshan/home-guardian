@@ -65,6 +65,46 @@ export default function Home() {
   </Link>
 </div>
       </motion.div>
+      <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="mt-32 max-w-2xl mx-auto"
+>
+  <p className="font-mono-label text-xs text-teal-400 mb-8">HOW IT WORKS</p>
+
+  <svg viewBox="0 0 500 420" className="w-full max-w-md mx-auto">
+    <polyline points="100,180 250,70 400,180" fill="none" stroke="#2dd4bf" strokeWidth="3" />
+    <line x1="130" y1="160" x2="130" y2="340" stroke="#2dd4bf" strokeWidth="3" />
+    <line x1="370" y1="160" x2="370" y2="340" stroke="#2dd4bf" strokeWidth="3" />
+    <line x1="130" y1="340" x2="370" y2="340" stroke="#2dd4bf" strokeWidth="3" />
+    <rect x="90" y="220" width="50" height="50" fill="none" stroke="#2dd4bf" strokeWidth="2" />
+    <rect x="330" y="220" width="50" height="50" fill="none" stroke="#2dd4bf" strokeWidth="2" />
+    <rect x="225" y="290" width="50" height="50" fill="none" stroke="#2dd4bf" strokeWidth="2" />
+
+    <circle cx="250" cy="70" r="4" fill="#5eead4" />
+    <line x1="254" y1="68" x2="330" y2="30" stroke="#475569" strokeWidth="1" strokeDasharray="3,3" />
+    <text x="335" y="20" fill="white" fontSize="12" fontWeight="600">Roof & ceiling</text>
+    <text x="335" y="36" fill="#5eead4" fontSize="11">ROUTINE</text>
+
+    <circle cx="90" cy="240" r="4" fill="#f87171" />
+    <line x1="86" y1="240" x2="10" y2="240" stroke="#475569" strokeWidth="1" strokeDasharray="3,3" />
+    <text x="0" y="228" fill="white" fontSize="12" fontWeight="600" textAnchor="start">Damp patch, wall</text>
+    <text x="0" y="244" fill="#f87171" fontSize="11" textAnchor="start">FIX NOW</text>
+
+    <circle cx="370" cy="180" r="4" fill="#fbbf24" />
+    <line x1="374" y1="180" x2="450" y2="200" stroke="#475569" strokeWidth="1" strokeDasharray="3,3" />
+    <text x="455" y="196" fill="white" fontSize="12" fontWeight="600">Panel</text>
+    <text x="430" y="212" fill="#fbbf24" fontSize="11">PLAN SOON</text>
+    <circle cx="250" cy="340" r="4" fill="#fbbf24" />
+    <line x1="250" y1="344" x2="250" y2="390" stroke="#475569" strokeWidth="1" strokeDasharray="3,3" />
+    <text x="250" y="405" fill="white" fontSize="12" fontWeight="600" textAnchor="middle">Foundation line</text>
+  </svg>
+
+<p className="text-slate-400 text-sm mt-8 mb-16 max-w-sm mx-auto">    Upload a report or answer a few questions. We sort every finding into what's urgent, what can wait, and what's normal.
+  </p>
+</motion.div>
     </div>
   );
 }
