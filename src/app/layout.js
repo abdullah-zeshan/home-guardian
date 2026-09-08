@@ -19,6 +19,9 @@ export const metadata = {
     icon: "/icon-192.png",
     apple: "/icon-192.png",
   },
+  verification: {
+    google: "O3n7ukOnlG4XhEfsYYdB4jY4b2yu5FIsyEM1dgzHEUY",
+  },
 };
 
 export const viewport = {
